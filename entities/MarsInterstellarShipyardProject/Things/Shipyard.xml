@@ -486,12 +486,12 @@
             <ThingProperties>
                 <PowerConsumed>
                     <Value>2005.0</Value>
-                    <Timestamp>2019-10-10T09:17:21.961Z</Timestamp>
+                    <Timestamp>2019-10-10T09:18:01.961Z</Timestamp>
                     <Quality>GOOD</Quality>
                 </PowerConsumed>
                 <PowerProduced>
                     <Value>150.0</Value>
-                    <Timestamp>2019-10-10T09:17:21.961Z</Timestamp>
+                    <Timestamp>2019-10-10T09:18:01.961Z</Timestamp>
                     <Quality>GOOD</Quality>
                 </PowerProduced>
                 <NoLowPowerStateUntil>
