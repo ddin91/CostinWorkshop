@@ -1,0 +1,731 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ build="b12"
+ majorVersion="8"
+ minorVersion="5"
+ modelPersistenceProviderPackage="PostgresPersistenceProviderPackage"
+ revision="0"
+ schemaVersion="1050"
+ universal="password">
+    <Mashups>
+        <Mashup
+         aspect.isResponsive="true"
+         aspect.mashupType="mashup"
+         columns="0.0"
+         description=""
+         documentationContent=""
+         homeMashup=""
+         lastModifiedDate="2019-10-10T07:24:21.626Z"
+         name="ValueStream_Mashup"
+         projectName="MarsInterstellarShipyardProject"
+         rows="0.0"
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <ParameterDefinitions></ParameterDefinitions>
+            <Things></Things>
+            <ThingShapes></ThingShapes>
+            <ThingTemplates>
+                <ThingTemplate>SolarCollectorTT</ThingTemplate>
+            </ThingTemplates>
+            <mashupContent>
+            <![CDATA[
+            {
+              "CustomMashupCss" : "",
+              "Data" : {
+                "DynamicThingTemplates_SolarCollectorTT" : {
+                  "DataName" : "DynamicThingTemplates_SolarCollectorTT",
+                  "EntityName" : "SolarCollectorTT",
+                  "EntityType" : "DynamicThingTemplates",
+                  "Id" : "cb139755-73e5-43ef-8726-03a6cc45e3f8",
+                  "Services" : [ {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "7354f2aa-62be-491a-9765-459311ce7045",
+                    "Name" : "QueryPropertyHistory",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "QueryPropertyHistory"
+                  } ]
+                },
+                "Session" : {
+                  "DataName" : "Session",
+                  "EntityName" : "",
+                  "EntityType" : "Session",
+                  "Id" : "session",
+                  "Services" : [ {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "SessionInterface",
+                    "Name" : "GetGlobalSessionValues",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "GetGlobalSessionValues"
+                  } ]
+                },
+                "ThingTemplates_SolarCollectorTT" : {
+                  "DataName" : "ThingTemplates_SolarCollectorTT",
+                  "EntityName" : "SolarCollectorTT",
+                  "EntityType" : "ThingTemplates",
+                  "Id" : "85329d2c-24eb-47e6-9165-4214c15c6da1",
+                  "Services" : [ {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "9c487014-09c7-493e-b101-1a84b31b0163",
+                    "Name" : "GetImplementingThings",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "GetImplementingThings"
+                  } ]
+                },
+                "UserExtensions" : {
+                  "DataName" : "UserExtensions",
+                  "EntityName" : "",
+                  "EntityType" : "UserExtensions",
+                  "Id" : "UserExtensions",
+                  "Services" : [ {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "UserExtensionInterface",
+                    "Name" : "GetCurrentUserExtensionProperties",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "GetCurrentUserExtensionProperties"
+                  } ]
+                }
+              },
+              "DataBindings" : [ {
+                "Id" : "94bfce0b-0c0f-4782-9aa0-e247927862b0",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "",
+                  "SourcePropertyBaseType" : "INFOTABLE",
+                  "SourcePropertyType" : "InfoTable",
+                  "TargetProperty" : "Data",
+                  "TargetPropertyBaseType" : "INFOTABLE",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "GetImplementingThings",
+                "SourceSection" : "ThingTemplates_SolarCollectorTT",
+                "TargetArea" : "UI",
+                "TargetId" : "dhxlist-5",
+                "TargetSection" : ""
+              }, {
+                "Id" : "4883f97e-7b32-42bc-ab9b-c2b5e013d0aa",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "",
+                  "SourcePropertyBaseType" : "INFOTABLE",
+                  "SourcePropertyType" : "InfoTable",
+                  "TargetProperty" : "Data",
+                  "TargetPropertyBaseType" : "INFOTABLE",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "QueryPropertyHistory",
+                "SourceSection" : "DynamicThingTemplates_SolarCollectorTT",
+                "TargetArea" : "UI",
+                "TargetId" : "dhxgrid-6",
+                "TargetSection" : ""
+              }, {
+                "Id" : "74d674e6-dcec-4109-ba7e-2bdb0931e553",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "name",
+                  "SourcePropertyBaseType" : "STRING",
+                  "TargetProperty" : "value",
+                  "TargetPropertyBaseType" : "THINGNAME",
+                  "TargetPropertyType" : "Entity"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "SelectedRows",
+                "SourceId" : "GetImplementingThings",
+                "SourceSection" : "ThingTemplates_SolarCollectorTT",
+                "TargetArea" : "Data",
+                "TargetId" : "EntityName",
+                "TargetSection" : "DynamicThingTemplates_SolarCollectorTT"
+              }, {
+                "Id" : "1a3017a1-a9e2-4cf7-8198-da4144406f1a",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "",
+                  "SourcePropertyBaseType" : "INFOTABLE",
+                  "SourcePropertyType" : "InfoTable",
+                  "TargetProperty" : "Data",
+                  "TargetPropertyBaseType" : "INFOTABLE",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "QueryPropertyHistory",
+                "SourceSection" : "DynamicThingTemplates_SolarCollectorTT",
+                "TargetArea" : "UI",
+                "TargetId" : "datafilter-14",
+                "TargetSection" : ""
+              }, {
+                "Id" : "1aa5013d-25a1-4f25-9f6a-97a32dc1c591",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "Query",
+                  "SourcePropertyBaseType" : "QUERY",
+                  "TargetProperty" : "query",
+                  "TargetPropertyBaseType" : "QUERY",
+                  "TargetPropertyType" : "Parameter"
+                } ],
+                "SourceArea" : "UI",
+                "SourceId" : "datafilter-14",
+                "SourceSection" : "",
+                "TargetArea" : "Data",
+                "TargetId" : "QueryPropertyHistory",
+                "TargetSection" : "DynamicThingTemplates_SolarCollectorTT"
+              }, {
+                "Id" : "9fa3a924-71b5-4149-ab0f-9f4ec2b632de",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "",
+                  "SourcePropertyBaseType" : "INFOTABLE",
+                  "SourcePropertyType" : "InfoTable",
+                  "TargetProperty" : "Data",
+                  "TargetPropertyBaseType" : "INFOTABLE",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "QueryPropertyHistory",
+                "SourceSection" : "DynamicThingTemplates_SolarCollectorTT",
+                "TargetArea" : "UI",
+                "TargetId" : "dataexport-15",
+                "TargetSection" : ""
+              } ],
+              "DesignTimePermissions" : {
+                "Create" : [ ],
+                "Delete" : [ ],
+                "Metadata" : [ ],
+                "Read" : [ ],
+                "Update" : [ ]
+              },
+              "Events" : [ {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "ThingTemplates_SolarCollectorTT",
+                "EventHandlerService" : "GetImplementingThings",
+                "EventTriggerArea" : "Mashup",
+                "EventTriggerEvent" : "Loaded",
+                "EventTriggerId" : "mashup-root",
+                "EventTriggerSection" : "",
+                "Id" : "768683fc-c67c-439a-905c-930362797c8c"
+              }, {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "DynamicThingTemplates_SolarCollectorTT",
+                "EventHandlerService" : "QueryPropertyHistory",
+                "EventTriggerArea" : "Data",
+                "EventTriggerEvent" : "SelectedRowsChanged",
+                "EventTriggerId" : "GetImplementingThings",
+                "EventTriggerSection" : "ThingTemplates_SolarCollectorTT",
+                "Id" : "62d9dfb2-585d-42aa-8158-b9b3b88d5445"
+              }, {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "DynamicThingTemplates_SolarCollectorTT",
+                "EventHandlerService" : "QueryPropertyHistory",
+                "EventTriggerArea" : "UI",
+                "EventTriggerEvent" : "Changed",
+                "EventTriggerId" : "datafilter-14",
+                "EventTriggerSection" : "",
+                "Id" : "475667df-38a6-4724-a7e1-36bbe8441236"
+              } ],
+              "RunTimePermissions" : {
+                "permissions" : [ ]
+              },
+              "UI" : {
+                "Properties" : {
+                  "AddToDashboardButtonStyle" : "DefaultAddToDashboardButtonStyle",
+                  "Area" : "Mashup",
+                  "BGImageRepeat" : "no-repeat",
+                  "BGImageSize" : "auto",
+                  "Columns" : 0,
+                  "ConfigureGadgetButtonStyle" : "DefaultConfigureGadgetButtonStyle",
+                  "DisplayName" : "Mashup",
+                  "EnableParameterEditing" : false,
+                  "Height" : 618,
+                  "Id" : "mashup-root",
+                  "IgnoreWarningsInViewMashup" : false,
+                  "IsPrintLayout" : false,
+                  "Left" : 0,
+                  "MashupToEditGadget" : "DefaultMashupToEditGadget",
+                  "MinHeight" : 0,
+                  "MinWidth" : 0,
+                  "ResponsiveLayout" : true,
+                  "Rows" : 0,
+                  "ShowDataLoading" : true,
+                  "Style" : "DefaultMashupStyle",
+                  "Title" : "",
+                  "TitleBar" : false,
+                  "TitleBarStyle" : "DefaultTitleBarStyle",
+                  "TitleBarText" : "Gadget Title Here",
+                  "Top" : 0,
+                  "Type" : "mashup",
+                  "Visible" : true,
+                  "Width" : 1024,
+                  "Z-index" : 10,
+                  "__TypeDisplayName" : "Mashup",
+                  "id_index" : 15,
+                  "supportsAutoResize" : true
+                },
+                "Widgets" : [ {
+                  "Properties" : {
+                    "Area" : "UI",
+                    "Columns" : 1,
+                    "DisplayName" : "layout-2",
+                    "Footer" : false,
+                    "FooterHeight" : 0,
+                    "Header" : false,
+                    "HeaderHeight" : 0,
+                    "Id" : "layout-2",
+                    "IncludeSpacingInFixedAreas" : false,
+                    "IsPrintLayout" : false,
+                    "Left" : 220,
+                    "LeftSidebar" : true,
+                    "LeftSidebarWidth" : 300,
+                    "Orientation" : "horizontal",
+                    "PctColumn1" : 100,
+                    "PctColumn2" : 0,
+                    "PctColumn3" : 1,
+                    "PctColumn4" : 1,
+                    "PctColumn5" : 1,
+                    "PctColumn6" : 1,
+                    "PctColumn7" : 1,
+                    "PctColumn8" : 1,
+                    "PctRow1" : 50,
+                    "PctRow2" : 50,
+                    "PctRow3" : 0,
+                    "PctRow4" : 0,
+                    "PctRow5" : 0,
+                    "PctRow6" : 0,
+                    "PctRow7" : 0,
+                    "PctRow8" : 0,
+                    "PrintMarginLeftRight" : 0.5,
+                    "PrintMarginTopBottom" : 0.5,
+                    "PrintWidth" : 650,
+                    "ResponsiveLayout" : true,
+                    "RightSidebar" : false,
+                    "RightSidebarWidth" : 0,
+                    "Rows" : 0,
+                    "ShowDataLoading" : true,
+                    "Spacing" : 2,
+                    "Top" : 110,
+                    "Type" : "layout",
+                    "Visible" : true,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Layout"
+                  },
+                  "Widgets" : [ {
+                    "Properties" : {
+                      "AnimateExpandCollapse" : true,
+                      "Area" : "UI",
+                      "BGImageRepeat" : "no-repeat",
+                      "BGImageSize" : "auto",
+                      "DisplayName" : "Left Sidebar",
+                      "ExpandCollapseTabLocation" : "outside",
+                      "Expanded" : true,
+                      "Id" : "container-3",
+                      "MinHeight" : 0,
+                      "MinWidth" : 0,
+                      "Overlay" : false,
+                      "OverlayIsTransparent" : false,
+                      "ResponsiveLayout" : true,
+                      "ShowDataLoading" : true,
+                      "ShowExpandCollapseTab" : false,
+                      "Style" : "DefaultContainerStyle",
+                      "TabCollapseStyle" : "DefaultTabCollapseStyle",
+                      "TabExpandStyle" : "DefaultTabExpandStyle",
+                      "TabHeight" : 36,
+                      "TabLocation" : "center",
+                      "TabOffset" : 0,
+                      "TabWidth" : 36,
+                      "Type" : "container",
+                      "Visible" : true,
+                      "Z-index" : 10,
+                      "__TypeDisplayName" : "Container"
+                    },
+                    "Widgets" : [ {
+                      "Properties" : {
+                        "Area" : "UI",
+                        "Columns" : 0,
+                        "DisplayName" : "layout-10",
+                        "Footer" : false,
+                        "FooterHeight" : 0,
+                        "Header" : false,
+                        "HeaderHeight" : 0,
+                        "Id" : "layout-10",
+                        "IncludeSpacingInFixedAreas" : false,
+                        "IsPrintLayout" : false,
+                        "Left" : 35,
+                        "LeftSidebar" : false,
+                        "LeftSidebarWidth" : 0,
+                        "Orientation" : "vertical",
+                        "PctColumn1" : 50,
+                        "PctColumn2" : 50,
+                        "PctColumn3" : 1,
+                        "PctColumn4" : 1,
+                        "PctColumn5" : 1,
+                        "PctColumn6" : 1,
+                        "PctColumn7" : 1,
+                        "PctColumn8" : 1,
+                        "PctRow1" : 50,
+                        "PctRow2" : 50,
+                        "PctRow3" : 0,
+                        "PctRow4" : 0,
+                        "PctRow5" : 0,
+                        "PctRow6" : 0,
+                        "PctRow7" : 0,
+                        "PctRow8" : 0,
+                        "PrintMarginLeftRight" : 0.5,
+                        "PrintMarginTopBottom" : 0.5,
+                        "PrintWidth" : 650,
+                        "ResponsiveLayout" : true,
+                        "RightSidebar" : false,
+                        "RightSidebarWidth" : 0,
+                        "Rows" : 2,
+                        "ShowDataLoading" : true,
+                        "Spacing" : 2,
+                        "Top" : 105,
+                        "Type" : "layout",
+                        "Visible" : true,
+                        "Z-index" : 10,
+                        "__TypeDisplayName" : "Layout"
+                      },
+                      "Widgets" : [ {
+                        "Properties" : {
+                          "AnimateExpandCollapse" : true,
+                          "Area" : "UI",
+                          "BGImageRepeat" : "no-repeat",
+                          "BGImageSize" : "auto",
+                          "DisplayName" : "Row 1",
+                          "ExpandCollapseTabLocation" : "outside",
+                          "Expanded" : true,
+                          "Id" : "container-11",
+                          "MinHeight" : 0,
+                          "MinWidth" : 0,
+                          "Overlay" : false,
+                          "OverlayIsTransparent" : false,
+                          "ResponsiveLayout" : true,
+                          "ShowDataLoading" : true,
+                          "ShowExpandCollapseTab" : false,
+                          "Style" : "DefaultContainerStyle",
+                          "TabCollapseStyle" : "DefaultTabCollapseStyle",
+                          "TabExpandStyle" : "DefaultTabExpandStyle",
+                          "TabHeight" : 36,
+                          "TabLocation" : "center",
+                          "TabOffset" : 0,
+                          "TabWidth" : 36,
+                          "Type" : "container",
+                          "Visible" : true,
+                          "Z-index" : 10,
+                          "__TypeDisplayName" : "Container"
+                        },
+                        "Widgets" : [ {
+                          "Properties" : {
+                            "Alignment" : "left",
+                            "Area" : "UI",
+                            "AutoSelectFirstRow" : true,
+                            "ClearIfNoSelection" : false,
+                            "ComboDropdownButtonStyle" : "DefaultComboDropdownButtonStyle",
+                            "ComboEnableCheckbox" : false,
+                            "ComboItemHighlightedStyle" : "DefaultComboItemHighlightedStyle",
+                            "ComboTextboxStyle" : "DefaultComboTextboxStyle",
+                            "DisableSelectedStyle" : false,
+                            "DisplayField" : "name",
+                            "DisplayName" : "dhxlist-5",
+                            "DropdownButtonStyle" : "DefaultDropdownButtonStyle",
+                            "DropdownSelectedStyle" : "DefaultDropdownSelectedStyle",
+                            "DropdownStyle" : "DefaultDropdownStyle",
+                            "EnableKeyboardSelections" : true,
+                            "Height" : 170,
+                            "HeightOfDropdownView" : 170,
+                            "Id" : "dhxlist-5",
+                            "Label" : "",
+                            "LabelAlignment" : "left",
+                            "Left" : 35,
+                            "ListBackgroundStyle" : "DefaultListBackgroundStyle",
+                            "ListFocusStyle" : "DefaultFocusStyle",
+                            "ListItemAlternateStyle" : "DefaultListItemAlternateStyle",
+                            "ListItemHoverStyle" : "DefaultListItemHoverStyle",
+                            "ListItemSelectedStyle" : "DefaultListItemSelectedStyle",
+                            "ListItemStyle" : "DefaultListItemStyle",
+                            "ListLabelStyle" : "DefaultWidgetLabelStyle",
+                            "MultiSelect" : false,
+                            "NumberOfItemsInDropdownView" : 6,
+                            "ResponsiveLayout" : true,
+                            "RowHeight" : 28,
+                            "ShowDataLoading" : true,
+                            "SingleClickSelectOnTablets" : false,
+                            "TabSequence" : -1,
+                            "TextIfNoSelectionType" : "editable",
+                            "TextVerticalAlignment" : 28,
+                            "ToolTipStyle" : "DefaultTooltipStyle",
+                            "Top" : 125,
+                            "Type" : "dhxlist",
+                            "ValueField" : "name",
+                            "View" : "list",
+                            "Visible" : true,
+                            "Width" : 110,
+                            "WidthOfDropdownView" : 110,
+                            "Z-index" : 10,
+                            "__TypeDisplayName" : "List",
+                            "__supportsLabel" : true,
+                            "__supportsTooltip" : true
+                          },
+                          "Widgets" : [ ]
+                        } ]
+                      }, {
+                        "Properties" : {
+                          "AnimateExpandCollapse" : true,
+                          "Area" : "UI",
+                          "BGImageRepeat" : "no-repeat",
+                          "BGImageSize" : "auto",
+                          "DisplayName" : "Row 2",
+                          "ExpandCollapseTabLocation" : "outside",
+                          "Expanded" : true,
+                          "Id" : "container-12",
+                          "MinHeight" : 0,
+                          "MinWidth" : 0,
+                          "Overlay" : false,
+                          "OverlayIsTransparent" : false,
+                          "ResponsiveLayout" : true,
+                          "ShowDataLoading" : true,
+                          "ShowExpandCollapseTab" : false,
+                          "Style" : "DefaultContainerStyle",
+                          "TabCollapseStyle" : "DefaultTabCollapseStyle",
+                          "TabExpandStyle" : "DefaultTabExpandStyle",
+                          "TabHeight" : 36,
+                          "TabLocation" : "center",
+                          "TabOffset" : 0,
+                          "TabWidth" : 36,
+                          "Type" : "container",
+                          "Visible" : true,
+                          "Z-index" : 10,
+                          "__TypeDisplayName" : "Container"
+                        },
+                        "Widgets" : [ {
+                          "Properties" : {
+                            "Area" : "UI",
+                            "DisplayName" : "panel-13",
+                            "Height" : 200,
+                            "HideScrollbars" : false,
+                            "HorizontalAnchor" : "left",
+                            "Id" : "panel-13",
+                            "Left" : 35,
+                            "ResponsiveLayout" : true,
+                            "ShowDataLoading" : true,
+                            "Style" : "DefaultPanelStyle",
+                            "Top" : 55,
+                            "Type" : "panel",
+                            "VerticalAnchor" : "top",
+                            "Visible" : true,
+                            "Width" : 300,
+                            "Z-index" : 10,
+                            "__TypeDisplayName" : "Panel"
+                          },
+                          "Widgets" : [ {
+                            "Properties" : {
+                              "AddButtonStyle" : "DefaultDataFilterAddButtonStyle",
+                              "Area" : "UI",
+                              "BarStyle" : "DefaultDataFilterStyle",
+                              "ColumnFormat" : "{\"PowerProduced\":{\"sourceType\":\"Unknown\",\"name\":\"PowerProduced\",\"aspects\":{\"minimumValue\":0,\"isPersistent\":true,\"isLogged\":true,\"dataChangeType\":\"VALUE\",\"units\":\"kW\"},\"isLocalOnly\":false,\"description\":\"\",\"sourceName\":\"\",\"category\":\"\",\"baseType\":\"NUMBER\",\"ordinal\":1,\"Title\":\"PowerProduced\",\"__showThisField\":true},\"OverallStatus\":{\"sourceType\":\"Unknown\",\"name\":\"OverallStatus\",\"aspects\":{\"defaultValue\":\"Online\",\"isPersistent\":true,\"isLogged\":true,\"dataChangeType\":\"VALUE\"},\"isLocalOnly\":false,\"description\":\"\",\"sourceName\":\"\",\"category\":\"\",\"baseType\":\"STRING\",\"ordinal\":0,\"Title\":\"OverallStatus\",\"__showThisField\":false},\"timestamp\":{\"name\":\"timestamp\",\"aspects\":{},\"description\":\"timestamp\",\"baseType\":\"DATETIME\",\"ordinal\":0,\"Title\":\"timestamp\",\"__showThisField\":true}}",
+                              "DateFormat" : "",
+                              "DateFormatToken" : "",
+                              "DisplayName" : "datafilter-14",
+                              "FocusStyle" : "DefaultButtonFocusStyle",
+                              "Height" : 26,
+                              "Horizontal" : false,
+                              "Id" : "datafilter-14",
+                              "Left" : 5,
+                              "LiveFiltering" : false,
+                              "ResponsiveLayout" : false,
+                              "ShowAdvancedOptions" : false,
+                              "ShowDataLoading" : true,
+                              "SortFilters" : true,
+                              "TabSequence" : 0,
+                              "Top" : 20,
+                              "Type" : "datafilter",
+                              "Visible" : true,
+                              "Width" : 285,
+                              "Z-index" : 9000,
+                              "__TypeDisplayName" : "Data filter"
+                            },
+                            "Widgets" : [ ]
+                          }, {
+                            "Properties" : {
+                              "ActiveStyle" : "DefaultButtonActiveStyle",
+                              "Area" : "UI",
+                              "ColumnFormat" : "{\"PowerProduced\":{\"sourceType\":\"Unknown\",\"name\":\"PowerProduced\",\"aspects\":{\"minimumValue\":0,\"isPersistent\":true,\"isLogged\":true,\"dataChangeType\":\"VALUE\",\"units\":\"kW\"},\"isLocalOnly\":false,\"description\":\"\",\"sourceName\":\"\",\"category\":\"\",\"baseType\":\"NUMBER\",\"ordinal\":1},\"OverallStatus\":{\"sourceType\":\"Unknown\",\"name\":\"OverallStatus\",\"aspects\":{\"defaultValue\":\"Online\",\"isPersistent\":true,\"isLogged\":true,\"dataChangeType\":\"VALUE\"},\"isLocalOnly\":false,\"description\":\"\",\"sourceName\":\"\",\"category\":\"\",\"baseType\":\"STRING\",\"ordinal\":0},\"timestamp\":{\"name\":\"timestamp\",\"aspects\":{},\"description\":\"timestamp\",\"baseType\":\"DATETIME\",\"ordinal\":0}}",
+                              "DataBinding" : {
+                                "Id" : "9fa3a924-71b5-4149-ab0f-9f4ec2b632de",
+                                "PropertyMaps" : [ {
+                                  "SourceProperty" : "",
+                                  "SourcePropertyBaseType" : "INFOTABLE",
+                                  "SourcePropertyType" : "InfoTable",
+                                  "TargetProperty" : "Data",
+                                  "TargetPropertyBaseType" : "INFOTABLE",
+                                  "TargetPropertyType" : "property"
+                                } ],
+                                "SourceArea" : "Data",
+                                "SourceDetails" : "AllData",
+                                "SourceId" : "QueryPropertyHistory",
+                                "SourceSection" : "DynamicThingTemplates_SolarCollectorTT",
+                                "TargetArea" : "UI",
+                                "TargetId" : "dataexport-15",
+                                "TargetSection" : ""
+                              },
+                              "DisplayName" : "dataexport-15",
+                              "FocusStyle" : "DefaultButtonFocusStyle",
+                              "Height" : 30,
+                              "HoverStyle" : "DefaultButtonHoverStyle",
+                              "IconAlignment" : "left",
+                              "Id" : "dataexport-15",
+                              "IncludeBOM" : false,
+                              "Label" : "Export",
+                              "Left" : 100,
+                              "ResponsiveLayout" : false,
+                              "RoundedCorners" : true,
+                              "ShowDataLoading" : true,
+                              "Style" : "DefaultButtonStyle",
+                              "TabSequence" : 0,
+                              "Top" : 65,
+                              "Type" : "dataexport",
+                              "Visible" : true,
+                              "Width" : 75,
+                              "Z-index" : 10,
+                              "__TypeDisplayName" : "Data Export"
+                            },
+                            "Widgets" : [ ]
+                          } ]
+                        } ]
+                      } ]
+                    } ]
+                  }, {
+                    "Properties" : {
+                      "AnimateExpandCollapse" : true,
+                      "Area" : "UI",
+                      "BGImageRepeat" : "no-repeat",
+                      "BGImageSize" : "auto",
+                      "DisplayName" : "Column 1",
+                      "ExpandCollapseTabLocation" : "outside",
+                      "Expanded" : true,
+                      "Id" : "container-4",
+                      "MinHeight" : 0,
+                      "MinWidth" : 0,
+                      "Overlay" : false,
+                      "OverlayIsTransparent" : false,
+                      "ResponsiveLayout" : true,
+                      "ShowDataLoading" : true,
+                      "ShowExpandCollapseTab" : false,
+                      "Style" : "DefaultContainerStyle",
+                      "TabCollapseStyle" : "DefaultTabCollapseStyle",
+                      "TabExpandStyle" : "DefaultTabExpandStyle",
+                      "TabHeight" : 36,
+                      "TabLocation" : "center",
+                      "TabOffset" : 0,
+                      "TabWidth" : 36,
+                      "Type" : "container",
+                      "Visible" : true,
+                      "Z-index" : 10,
+                      "__TypeDisplayName" : "Container"
+                    },
+                    "Widgets" : [ {
+                      "Properties" : {
+                        "AlignHeader" : false,
+                        "Area" : "UI",
+                        "AutoSelectFirstRow" : false,
+                        "CellTextWrapping" : false,
+                        "ColumnFormat" : {
+                          "formatInfo" : [ {
+                            "Align" : "left",
+                            "AllowEdit" : false,
+                            "FieldName" : "OverallStatus",
+                            "FormatOptions" : {
+                              "FormatString" : "full",
+                              "renderer" : "STRING"
+                            },
+                            "Title" : "OverallStatus",
+                            "ValidationExpression" : "",
+                            "ValidationMessage" : "",
+                            "Width" : "auto"
+                          }, {
+                            "Align" : "left",
+                            "AllowEdit" : false,
+                            "FieldName" : "timestamp",
+                            "FormatOptions" : {
+                              "FormatString" : "[[dateTimeFormat_Default]]",
+                              "renderer" : "DATETIME"
+                            },
+                            "Title" : "timestamp",
+                            "ValidationExpression" : "",
+                            "ValidationMessage" : "",
+                            "Width" : "auto"
+                          }, {
+                            "Align" : "right",
+                            "AllowEdit" : false,
+                            "FieldName" : "PowerProduced",
+                            "FormatOptions" : {
+                              "FormatString" : "0.00",
+                              "renderer" : "NUMBER"
+                            },
+                            "Title" : "PowerProduced",
+                            "ValidationExpression" : "",
+                            "ValidationMessage" : "",
+                            "Width" : "auto"
+                          } ]
+                        },
+                        "CurrentScrollTop" : 0,
+                        "DisplayName" : "dhxgrid-6",
+                        "FocusStyle" : "DefaultFocusStyle",
+                        "GridBackgroundStyle" : "DefaultGridBackgroundStyle",
+                        "GridEditableFieldStyle" : "DefaultGridEditableFieldStyle",
+                        "GridHeaderStyle" : "DefaultGridHeaderStyle",
+                        "GridHeaderTextCase" : "capitalize",
+                        "GridInvalidFieldStyle" : "DefaultGridInvalidFieldStyle",
+                        "Height" : 200,
+                        "Id" : "dhxgrid-6",
+                        "IsEditable" : false,
+                        "IsPrintLayout" : false,
+                        "Left" : 250,
+                        "MultiSelect" : false,
+                        "ResponsiveLayout" : true,
+                        "RowAlternateBackgroundStyle" : "DefaultRowAlternateBackgroundStyle",
+                        "RowBackgroundStyle" : "DefaultRowBackgroundStyle",
+                        "RowHeight" : 30,
+                        "RowHoverStyle" : "DefaultRowHoverStyle",
+                        "RowSelectedStyle" : "DefaultRowSelectedStyle",
+                        "ScrollTop" : 0,
+                        "ShowAllColumns" : false,
+                        "ShowDataLoading" : true,
+                        "TabSequence" : 0,
+                        "Top" : 130,
+                        "Type" : "dhxgrid",
+                        "Visible" : true,
+                        "Width" : 400,
+                        "Z-index" : 10,
+                        "__TypeDisplayName" : "Grid"
+                      },
+                      "Widgets" : [ ]
+                    } ]
+                  } ]
+                } ]
+              },
+              "mashupType" : "mashup"
+            }
+            ]]>
+            </mashupContent>
+            <preview></preview>
+        </Mashup>
+    </Mashups>
+</Entities>

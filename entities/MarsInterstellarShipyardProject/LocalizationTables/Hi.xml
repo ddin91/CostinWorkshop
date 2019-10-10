@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ build="b12"
+ majorVersion="8"
+ minorVersion="5"
+ modelPersistenceProviderPackage="PostgresPersistenceProviderPackage"
+ revision="0"
+ schemaVersion="1050"
+ universal="password">
+    <LocalizationTables>
+        <LocalizationTable
+         description=""
+         documentationContent=""
+         homeMashup=""
+         languageCommon="Hindi"
+         languageNative="Hindi"
+         lastModifiedDate="2019-10-10T07:24:21.563Z"
+         name="Hi"
+         projectName="MarsInterstellarShipyardProject"
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables>
+                <ConfigurationTable
+                 description="Localization tokens and usage"
+                 isMultiRow="true"
+                 name="LocalizationTokens"
+                 ordinal="0">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition
+                             aspect.friendlyName="Translation context"
+                             baseType="STRING"
+                             description="Translation context"
+                             name="context"
+                             ordinal="3"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="Token name"
+                             baseType="STRING"
+                             description="Token name"
+                             name="name"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="Token usage"
+                             baseType="STRING"
+                             description="Token usage"
+                             name="usage"
+                             ordinal="2"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="Localized value"
+                             baseType="STRING"
+                             description="Localized value"
+                             name="value"
+                             ordinal="1"></FieldDefinition>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows>
+                        <Row>
+                            <context></context>
+                            <name>
+                            <![CDATA[
+                            ShipyardPowerSystem
+                            ]]>
+                            </name>
+                            <usage></usage>
+                            <value>
+                            <![CDATA[
+                            Aeronava spatiala
+                            ]]>
+                            </value>
+                        </Row>
+                    </Rows>
+                </ConfigurationTable>
+            </ConfigurationTables>
+        </LocalizationTable>
+    </LocalizationTables>
+</Entities>
